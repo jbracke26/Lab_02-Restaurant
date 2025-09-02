@@ -1,0 +1,63 @@
+Week 01 Lab : Standard Level
+Due Date: Sunday 9/7 @ midnight
+
+    Objective: Utilize basic python data types, loops, conditionals, and user data in small program according
+               to a set of criteria below.
+
+    - Create a program that asks the user for their...
+        - name
+        - age
+        - if they are multilingual
+
+    - Program should accomplish the set of criteria listed below
+        1. Print a statement that greets the user by name and welcomes them to the program
+        2. User data is stored inside of a dictionary
+        3. If the user is under 13 state that the user cannot sit in the passenger seat of a car
+            - if the user is under 18 then state that the user cannot vote
+            - If the user is under 25 state that the user cannot rent a car
+            - If the user is over 35 state that they are getting old...
+        4. If the user is multilingual, ask the user how many languages they speak.
+            - Use a loop to ask the user for each of the 'n' language that they speak and each language entered.
+            - If the user is not multilingual, ask the user to enter a language that they wish to learn. Print this back to user.
+        5. Ask if another user would like to enter their information as well. All dictionaries with user data should be appended
+           to a list with info of all users. Only end program when user specifies that they are done.
+        5. Program is considered complete if...
+            - Program prints greeting with user name
+            - Program prints out all statements appropriate for user age
+            - Program prints languages spoken or language user wishes to learn for user
+            - Program prints list of all user dictionaries when done
+        
+
+            
+
+Week 01 Lab : Advanced Level
+Due Date: Sunday 9/7 @ midnight
+
+    Objective: Build an interactive program that practices input/output, conditionals, data structures, and introduces a new
+               tool/library (GUI or formatted output). The program should take user information and present it in a polished, 
+               engaging way.
+
+    Requirements: GUI or Rich Input/Output. A simple GUI toolkit (tkinter/turtle, or PyQt if you already know tkinter). Or a terminal UI
+               library (rich or textual) for nicely formatted text. Collect the same base data as the beginner assignment.
+
+               
+    - Create a program that asks the user for their...
+
+        - Name
+        - Age
+        - Multilingual status
+
+    - Program should accomplish the set of criteria listed below
+
+        1. For age rules, instead of just printing messages, display a progression of privileges (driving, voting, renting a car, etc.)
+          in a formatted way (e.g., a list, progress bar, or GUI checkboxes).
+        2. Language handling. If multilingual, ask for all the languages. Store them in a data structure and display them nicely (for example, in a
+            sorted list, or with flags/emojis if using rich).
+        3. If not multilingual, ask for a desired language and display a “learning plan” (could just be a fun random tip or suggested practice hours generated in code).
+
+    - Bonus Challenges (optional but encouraged):
+        1. Write user data to a JSON file so that the program “remembers” users between runs.
+        2. Translate a greeting into one of the listed languages using a library like googletrans.
+        3. Use datetime to estimate what year the user can vote, rent a car, or retire.
+        
+
