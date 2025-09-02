@@ -23,6 +23,9 @@ with help(), and fill in the TODOs. Test your code after each level.
 import random
 # TODO: Generate and print 3 random integers between 1 and 10
 
+for i in range (3): 
+    rand_integer = random.randint(1,10)
+    print(rand_integer)
 
 # ---------------------------------------------------
 # Level 2 – Complex Numbers with cmath
@@ -34,9 +37,10 @@ import random
 
 import cmath
 # TODO: Print the square root of -1 using cmath
+x = -1
+sqrt_x = cmath.sqrt(x)
+print(f"Square root of {x}: {sqrt_x}")
 
-
-# ---------------------------------------------------
 # Level 3 – User Input Basics
 # Task:
 # 1. Ask the user to type their name
@@ -44,6 +48,8 @@ import cmath
 # ---------------------------------------------------
 
 # TODO: Ask for the user’s name and print a greeting
+name = input("What is your name?")
+print(f"Hello, {name}")
 
 
 # ---------------------------------------------------
@@ -55,6 +61,8 @@ import cmath
 # ---------------------------------------------------
 
 # TODO: Ask for a number, convert it to int, double it, and print
+user_number = int(input("Pick a number "))
+print(user_number * 2)
 
 
 # ---------------------------------------------------
