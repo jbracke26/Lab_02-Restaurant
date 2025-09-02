@@ -11,8 +11,8 @@ Your job is to experiment, fill in blanks, and notice how conditionals change wh
 # Let's explore.
 
 # TODO: Create two variables. One that represents age, and the other a boolean that is True if you are a student and false if you are not:
-age = 30
-is_student = False
+age = 18
+is_student = True
 
 # What happens when we compare numbers?
 print("Is age greater than 18?", age > 18)
@@ -110,6 +110,7 @@ else:
 # 1. What does a conditional REQUIRE in order to run effectively?
     # ANSWER: it requires some logical statement that results in either a truth or a false status. Either with a boolean
     # statement or a boolean variable.
+    #
 # 2. How do elif and else make your code shorter or more readable?
     # Improves code readability with conditional logic. It is more efficient than using multiple independent if statements
     # or deeply nested if-else blocks.
