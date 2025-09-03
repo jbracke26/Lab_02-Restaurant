@@ -75,7 +75,6 @@ print(user_number * 2)
 
 # TODO: Generate a random complex number with integer real and imaginary parts
 
-
 # ---------------------------------------------------
 # Level 6 – Complex Number Guesser Game
 # Rules:
@@ -99,6 +98,17 @@ print("I have chosen a complex number with real and imaginary parts between -5 a
 # - Ask separately for real and imaginary guesses
 # - Convert inputs to integers
 # - Use if/else to give “too high” / “too low” feedback
+randint = random.randint(-5,5)
+cmpint = cmath.sqrt(x) + random.randint(-5,5)
+randcmp = cmpint + randint
+guessing = True
+while guessing: 
+    guess = int(input(f"Enter Your guess: {guess}"))
+    if guess = randcmp:
+        guessing = False
+    else:
+        guessing = True
+#not sure how to get ts to compile - ask Kevin abt it in class
 
 
 # ---------------------------------------------------
