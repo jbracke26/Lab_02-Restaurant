@@ -1,0 +1,50 @@
+from HW_9 import rectangle
+from HW_9 import triangle
+from HW_9 import circle
+from utils import convtoinch
+from utils import convtocm
+from utils import comparea
+
+shapes = []
+
+print("Welcome to Shape Toolkit!")
+shapesadding = True
+while shapesadding:
+    print("Enter a shape (1 for rectangle, 2 for triangle, and 3 for circle)")
+    shapein = int(input())
+    if shapein == 1:
+        length = int(input("Input Length: "))
+        width = int(input("Input width: "))
+        r = rectangle(length, width)
+        shapes.append(r)
+        shapesadding=True
+    elif shapein == 2: 
+        length = int(input("Input Length: "))
+        width = int(input("Input width: "))
+        t = triangle(length, width)
+        shapes.append(t)
+        shapesadding=True
+    elif shapein == 3: 
+        radius = int(input("Input Radius: "))
+        c = circle(radius)
+        shapes.append(c)
+        shapesadding=True
+    else: 
+        shapesadding=False
+print(shapes)
+compare = True
+while compare: 
+    print("What would you like to do with these shapes? If you want to compare area, press 1. If you want to see information about existing shapes, press 2.")
+    areain  = int(input())
+    if areain == 2:
+        shapesadding = True
+    elif areain == 1:
+        shapescomp = True
+        while shapescomp: 
+            print("Which is the first shape you want to compare? For the first, press 1; for the next, 2; etc.")
+            shapesget = int(input())
+            print("Which is the second shape you want to compare")
+            shapesget2 = int(input())
+            comparea(shapes.get(shapesget), shapes.get(shapesget2))
+    else : 
+        compare = False
