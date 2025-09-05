@@ -1,9 +1,6 @@
-from HW_9 import rectangle
-from HW_9 import triangle
-from HW_9 import circle
-from utils import convtoinch
-from utils import convtocm
-from utils import comparea
+'''
+from HW_9 import rectangle, circle, triangle
+import utils
 
 shapes = []
 
@@ -31,6 +28,7 @@ while shapesadding:
         shapesadding=True
     else: 
         shapesadding=False
+
 print(shapes)
 compare = True
 while compare: 
@@ -40,11 +38,20 @@ while compare:
         shapesadding = True
     elif areain == 1:
         shapescomp = True
-        while shapescomp: 
-            print("Which is the first shape you want to compare? For the first, press 1; for the next, 2; etc.")
-            shapesget = int(input())
-            print("Which is the second shape you want to compare")
-            shapesget2 = int(input())
-            comparea(shapes.get(shapesget), shapes.get(shapesget2))
-    else : 
+        
         compare = False
+'''
+from HW_9 import rectangle, circle, triangle
+from utils import convtocm
+r1 = rectangle(5,4)
+t1 = triangle(2,5)
+c1 = circle(5)
+print(rectangle.discribe(r1))
+r1met = convtocm(rectangle.area(r1))
+print(r1met)
+triangle.hypotenuse(t1)
+print(triangle.discribe(t1))
+t1met = convtocm(triangle.area(r1))
+print(t1met)
+print(circle.discribe(c1))
+

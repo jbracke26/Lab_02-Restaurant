@@ -13,12 +13,13 @@ class triangle:
     def __init__(self, tlength: int, twidth: int):
         self.height = twidth
         self.length = tlength
+        self.hyp = cmath.sqrt(((twidth * twidth) + (tlength * tlength)))
     def area(self) -> int :
         return 1/2 * (self.height * self.length)
-    def hyp(self) -> float :
-        return cmath.sqrt(((self.height * self.height) + (self.length * self.length)))
+    def hypotenuse(self) -> float :
+        return self.hyp
     def discribe(self) -> None:
-        print(f"Triangle with length {self.length}, height {self.height}, and hypotenuse {triangle.hyp()}")
+        print(f"Triangle with length {self.length}, height {self.height}, and hypotenuse {self.hyp}")
 class circle: 
     def __init__(self, radius: int):
         self.radius = radius
