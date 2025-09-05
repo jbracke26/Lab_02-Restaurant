@@ -104,7 +104,7 @@ randcmp = cmpint + randint
 guessing = True
 while guessing: 
     guess = int(input(f"Enter Your guess: {guess}"))
-    if guess = randcmp:
+    if guess:
         guessing = False
     else:
         guessing = True

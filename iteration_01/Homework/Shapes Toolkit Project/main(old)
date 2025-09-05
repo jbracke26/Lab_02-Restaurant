@@ -51,7 +51,6 @@ r1met = convtocm(rectangle.area(r1))
 print(r1met)
 triangle.hypotenuse(t1)
 print(triangle.discribe(t1))
-t1met = convtocm(triangle.area(r1))
+t1met = convtocm(triangle.area(t1))
 print(t1met)
 print(circle.discribe(c1))
-

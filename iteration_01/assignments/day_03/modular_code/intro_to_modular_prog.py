@@ -12,19 +12,18 @@
 # First attempt: copy-paste code for each rectangle.
 width1 = 5
 height1 = 10
-print(f"Rectangle 1 area: {width1 + height1}")
+print(f"Rectangle 1 area: {width1 *  height1}")
 
 width2 = 3
 height2 = 7
-print(f"Rectangle 2 area: {width2 + height2}")
+print(f"Rectangle 2 area: {width2  * height2}")
 
 width3 = 9
 height3 = 2
-print(f"Rectangle 3 area: {width3 + height3}")
+print(f"Rectangle 3 area: {width3 * height3}")
 
 # Problem: What if you realize you wrote the wrong formula?
 # You’d have to go fix it in EVERY place.
-
 # Task: Find the bug and make sure to fix it in every place.
 
 
@@ -54,7 +53,8 @@ print(f"Rectangle 3 area: {area_of_rectangle(9, 2)}")
 
 # Challenge: Add a new function area_of_circle(radius) with proper docstring.
 
-
+def area_of_circle(rad: int, pi: 3.14159) -> int:
+    return rad * pi * 2
 # Example function WITHOUT a return value
 def print_welcome_message(student_name: str) -> None:
     """

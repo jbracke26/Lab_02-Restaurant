@@ -18,7 +18,7 @@ caught up, clarify questions, and ensure everyone is ready to move forward.
 
 - Be **proactive**:
   - Ask questions whenever you are unsure.
-  - Check in with your neighbors — help each other out if someone is stuck.
+  - Check in with your neighbors — help each other ou if someone is stuck.
 
 ### 2. Current Lab
 - The **current lab** is also assigned.
