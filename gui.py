@@ -32,11 +32,13 @@ class MainWindow(QMainWindow):
 
         AddItem = QPushButton("Add Item")
         SubItem = QPushButton("Remove Item")
+        SaveJSON = QPushButton("Save JSON")
 
         #SubItem.clicked.connect(remove_item)
    
         inner_layout.addWidget(AddItem)
         inner_layout.addWidget(SubItem)
+        inner_layout.addWidget(SaveJSON)
 
         list_widget = QListWidget()
         list_widget.addItems(["Item 1", "Item 2", "Item 3"])
