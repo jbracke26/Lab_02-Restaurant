@@ -27,7 +27,7 @@
         },
         {
             "category" : "Desserts",
-            "id" : 1, 
+            "id" : 3, 
             "items" : [
                 {"id": 14, "name" : "Apple Pie", "price": 4.99},
                 {"id": 15, "name" : "Cherry Pie", "price": 4.99},
