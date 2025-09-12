@@ -12,33 +12,8 @@ from PySide6.QtWidgets import (
     QComboBox,
 )
 from PySide6.QtCore import Qt
-
-
-class AddPopup(QDialog):
-    def __init__(self, parent=None):
-        super().__init__(parent)
-
-        self.setWindowTitle("Add Item")
-
-        self.layout = QVBoxLayout(self)
-
-        self.label = QLabel("Add Item")
-        self.label.setAlignment(Qt.AlignCenter)
-
-        self.Name = QTextEdit("Name")
-        self.Price = QTextEdit("Price")
-
-        self.Category = QComboBox()
-        self.Category.addItems(["Appetizers & Sides", "Entrees", "Desserts", "Drinks"])
-
-        self.Save = QPushButton("Save")
-
-        self.Save.clicked.connect(self.close)
-        self.layout.addWidget(self.label)
-        self.layout.addWidget(self.Name)
-        self.layout.addWidget(self.Price)
-        self.layout.addWidget(self.Category)
-        self.layout.addWidget(self.Save)
+import qt_themes
+from Class_Restaurant import restaurant
 
 
 class MainWindow(QMainWindow):
@@ -59,13 +34,15 @@ class MainWindow(QMainWindow):
         inner_layout = QHBoxLayout(inner_container)
 
         self.AddItem = QPushButton("Add Item")
-        SubItem = QPushButton("Remove Item")
+        self.SubItem = QPushButton("Remove Item")
+        self.EditItem = QPushButton("Edit Item")
 
         self.AddItem.clicked.connect(self.open_add_popup)
         # SubItem.clicked.connect(remove_item)
 
         inner_layout.addWidget(self.AddItem)
-        inner_layout.addWidget(SubItem)
+        inner_layout.addWidget(self.SubItem)
+        inner_layout.addWidget(self.EditItem)
 
         list_widget = QListWidget()
         list_widget.addItems(["Item 1", "Item 2", "Item 3"])
@@ -75,7 +52,6 @@ class MainWindow(QMainWindow):
         layout.addWidget(label)
 
     def remove_item(self, remove):
-        # TODO: Implement item removal functionality
         pass
 
     def open_add_popup(self):
@@ -84,7 +60,57 @@ class MainWindow(QMainWindow):
         pass
 
 
+class AddPopup(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+
+        self.setWindowTitle("Add Item")
+
+        self.layout = QVBoxLayout(self)
+
+        self.label = QLabel("Add Item")
+        self.label.setAlignment(Qt.AlignCenter)
+
+        self.nameLabel = QLabel("Item Name:")
+        self.nameLabel.setAlignment(Qt.AlignLeft)
+        self.priceLabel = QLabel("Item Price:")
+        self.priceLabel.setAlignment(Qt.AlignLeft)
+
+        self.nameInput = QTextEdit()
+        self.priceInput = QTextEdit()
+
+        self.Category = QComboBox()
+        self.Category.addItems(["Appetizers & Sides", "Entrees", "Desserts", "Drink, Misc"])
+
+        self.Save = QPushButton("Save")
+
+        #self.Save.clicked.connect(self.save_item)
+        self.layout.addWidget(self.label)
+        self.layout.addWidget(self.nameLabel)
+        self.layout.addWidget(self.nameInput)
+        self.layout.addWidget(self.priceLabel)
+        self.layout.addWidget(self.priceInput)
+        self.layout.addWidget(self.Category)
+        self.layout.addWidget(self.Save)
+
+        #def save_item(self):
+            #self.itemdata = {
+                #"name": self.nameInput.toPlainText(),
+                #"price": self.priceInput.toPlainText(),
+                #"category": self.Category.currentText()
+           # }
+           # try :
+         #       restaurant.menuadd(self.itemdata)
+         #   except:
+         #       print("Error")
+          #  pass
+          #  self.close()
+                
+
+
+
 app = QApplication()
 window = MainWindow()
+qt_themes.set_theme("catppuccin_latte")
 window.show()
 app.exec()
