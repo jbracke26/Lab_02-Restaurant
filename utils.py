@@ -1,3 +1,7 @@
 import json
-def filepath():
-    filepath = "C:\Users\ebele\GitRep\my_work\Lab_02-Restaurant\menu.json"
+from pathlib import Path
+def load_menu(filename):
+    with open (filename, 'r') as file:
+        menu = json.loads()
+        return(menu)
+
