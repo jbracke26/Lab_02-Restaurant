@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+eben-working
 from utils import loadjson, savejson
 #this is the main class for the restaurant object
 class restaurant: 
@@ -14,6 +15,7 @@ class restaurant:
         print(globaldata)
  # This is a function to add a new menu item and save it to the json file
     def menuadd(self):
+eben-working
         menu = loadjson
         menuitemaddid = menu.len + 1
         menuitemaddname = input("Enter the name of the item: ")
