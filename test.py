@@ -1,4 +1,4 @@
 from Class_Restaurant import restaurant
-from utils import loadjson, savejson
 restaurant = restaurant()
-restaurant.menuadd()
+# FIXED: menuadd, menuchange, and data functions both work now
+restaurant.menuremove()

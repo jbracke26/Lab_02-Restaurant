@@ -3,11 +3,13 @@ from pathlib import Path
 # Function to load the menu.json file in an editable format
 def loadjson(): 
     with open("menu.json", "r") as file:
-        menu = json.loads(file)
+        global menu
+        menu = json.load(file)
         return menu
 
 #Function to save the changes to the menu.json file
 def savejson():
+    global menu
     with open("menu.json", "w") as file:
-        json.dumps(file, indent = 4)
-    print("Saved to JSON")    
+        json.dump(menu, file, indent=1)
+    print("Saved to JSON")
