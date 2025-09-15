@@ -9,6 +9,7 @@ Items displayed by category:
    - Main Courses
    - Desserts
    - Drinks
+
 Add new items with the following details:
    - Name
    - Description
