@@ -9,7 +9,7 @@ def loadjson():
 #Function to save the changes to the menu.json file
 def savejson(data):
     with open("menu.json", "w") as file:
-        json.dump(data, file)
+        json.dump(data, file, indent=2)
     print("Saved to JSON")    
 
 
