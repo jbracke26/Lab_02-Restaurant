@@ -1,5 +1,4 @@
 from PySide6.QtWidgets import (
-    QApplication,
     QMainWindow,
     QLabel,
     QPushButton,
@@ -12,7 +11,6 @@ from PySide6.QtWidgets import (
     QComboBox,
 )
 from PySide6.QtCore import Qt
-import qt_themes
 from utils import loadjson
 from Class_Restaurant import restaurant
 
@@ -23,12 +21,14 @@ class MainWindow(QMainWindow):
 
         self.setWindowTitle("Restaurant Lab")
 
+        # create restaurant instance to handle menu operations
         self.restaurant = restaurant()
 
         # track selected item across all lists
         self.selected_item_id = None
         self.selected_item_data = None
 
+        # setup main window container
         container = QWidget()
         self.setCentralWidget(container)
 
@@ -40,10 +40,12 @@ class MainWindow(QMainWindow):
         self.inner_container = QWidget()
         self.inner_layout = QHBoxLayout(self.inner_container)
 
+        # create buttons for menu operations
         self.AddItem = QPushButton("Add Item")
         self.SubItem = QPushButton("Remove Item")
         self.EditItem = QPushButton("Edit Item")
 
+        # connect buttons to their functions
         self.AddItem.clicked.connect(self.open_add_popup)
         self.SubItem.clicked.connect(self.remove_selected_item)
         self.EditItem.clicked.connect(self.open_edit_popup)
@@ -52,12 +54,14 @@ class MainWindow(QMainWindow):
         self.inner_layout.addWidget(self.SubItem)
         self.inner_layout.addWidget(self.EditItem)
 
+        # create list widgets for each menu category
         self.appetizer_widget = QListWidget()
         self.entree_widget = QListWidget()
         self.dessert_widget = QListWidget()
         self.drink_widget = QListWidget()
         self.other_widget = QListWidget()
 
+        # connect selection events to track which item is selected
         self.appetizer_widget.itemSelectionChanged.connect(self.appetizer_selected)
         self.entree_widget.itemSelectionChanged.connect(self.entree_selected)
         self.dessert_widget.itemSelectionChanged.connect(self.dessert_selected)
@@ -306,10 +310,3 @@ class EditPopup(QDialog):
         self.parent().refresh_menu()
 
         self.close()
-
-
-app = QApplication()
-window = MainWindow()
-qt_themes.set_theme("catppuccin_latte")
-window.show()
-app.exec()
