@@ -1,12 +1,18 @@
 import json
 import random
 def loadjson(): 
-    with open("userdata.json", "r") as file:
-        users = json.load(file)
-        return users
-def savejson(data):
-    with open("userdata.json", "w") as file:
-        json.dump(data, file)
+    import os
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(script_dir, "userdata.json")
+    with open(file_path, "r") as file:
+        return json.load(file)
+    
+def savejson(file, data):
+    import os
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(script_dir, "userdata.json")
+    with open(file_path, "w") as file:
+        json.dump(data, file, indent = 4)
     print("Saved to JSON")    
 def randomname():
     randomint = random.randint(0,77)
@@ -89,9 +95,9 @@ def randomname():
     "Ryland Wells",
     "Cecilia Barron",
     "Dustin Brooks"] 
-    randomname = names.get(randomint)
+    randomname = names[randomint]
     return randomname
-def randomhobby():
+def randomhobby(): 
     randomint = random.randint(0,9)
     hobbies = [
         "Piano",
@@ -105,7 +111,7 @@ def randomhobby():
         "Golf",
         "Tap Dancing"
     ]
-    randomhobby = hobbies.get(randomint)
+    randomhobby = hobbies[randomint]
     return randomhobby
 def randomage():
     randomage = random.randint(10,100)
