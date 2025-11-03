@@ -1,12 +1,22 @@
 [
     {
         "name": "Adley May",
-        "age": "23",
+        "age": 23,
         "hobby": "Bird watching"
     },
     {
         "name": "Sierra Alfaro",
         "age": 82,
         "hobby": "Soccer"
+    },
+    {
+        "name": "Dustin Brooks",
+        "age": 90,
+        "hobby": "Studying"
+    },
+    {
+        "name": "Kiara Wallace",
+        "age": 66,
+        "hobby": "Piano"
     }
 ]
