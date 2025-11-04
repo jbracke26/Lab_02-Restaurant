@@ -9,10 +9,24 @@ def home():
 
 @app.route("/contact")
 def contact():
-    return render_template("contact.html", email=" ")
+    info = {
+        "instagram" : "@ebenlewis23",
+        "email" : "elewis27@nmhschool.org",
+        "GitHub" : "EbenLewis"
+    }
+    is_student = True
+
+    return render_template("contact.html", info=info, student = is_student)
+
+@app.route("/tools")
+def tools():
+    tools = ["Flask","HTML","CSS","Jinja2"]
+    return render_template("tools.html", tools=tools)
 
 @app.route("/about")
 def about():
-    return render_template("about.html", author=" ")
+    author = "Eben Lewis"
+    interests = ["Guitar","Music Production","Electrical Engineering","Computer Technology"]
+    return render_template("about.html", author=author, interests=interests)
 
 app.run(debug=True)

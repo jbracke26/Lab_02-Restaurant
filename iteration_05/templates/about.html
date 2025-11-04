@@ -1,3 +1,10 @@
 {% extends 'base.html' %}
 {% block title %} About Us {%endblock%}
-{% block content %} <h1>We are a great and incredible website</h1> {%ednblock%}
+{% block content %} 
+    <h1>We are a great and incredible website</h1> 
+    <p>Author: {{ author }}</p>
+    <h2>Interests</h2>
+    <ul>
+    <li>{{interests}}</li>
+    </ul>
+    {% endblock %}
