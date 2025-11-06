@@ -10,14 +10,14 @@
 </head>
 
 <!-- Body tag opens the main visible part of the webpage. Everything shown in the browser window lives inside here.-->
-<body>
+<body class="bg-gray-200">
     <!-- Navigation bar because I want all my pages to have the ability to navigate between other routes -->
-    <nav>
-        <a href="/">Home</a> |
-        <a href="/contact">Contact</a> |
+    <nav class = "flex justify-between items-center p-4 bg-gray-400 text-blue-500 font-bold">
+        <a href="/">Home</a>    |
+        <a href="/contact">Contact</a>   |
         <a href="/about">About</a>
     </nav>
-    <hr> <!-- This creates a horizontal line -->
+    <hr class=""> <!-- This creates a horizontal line -->
 
     <!-- This is where child templates will insert content -->
     {% block content %}{% endblock %}

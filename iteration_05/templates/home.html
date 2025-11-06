@@ -1,10 +1,11 @@
 {% extends 'base.html' %} <!-- We want it to base template but to populate info for home page inside -->
 {% block title %} Home {% endblock %} <!-- inside of the title block, insert 'Home' -->
 {% block content %} <!-- inside of the block content, insert 'Welcome to the Flask Jinja2 application' -->
-<h1>Welcome to the Flask UI App!</h1>
-{% endblock %}
-{%if student%}
-    <h1>Go lock in and get off the internet, this is an unc website!</h1> 
-    {%else%} 
-    h1>Welcome, esteemed visitor!</h1>
-{%endif%}
+    <div class="flex flex-col justify-center items-center bg-gray-200 text-blue-500 font-bold gap-4">
+        <h1>Basic UI App</h1>
+        <div class = "absolute top-40 p-4 bg-gray-600 shadow rounded">
+            <h2>It's pretty great!</h2>
+        </div>
+    </div>
+{%endblock%}
+            

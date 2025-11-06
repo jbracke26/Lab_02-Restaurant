@@ -14,19 +14,15 @@ def contact():
         "email" : "elewis27@nmhschool.org",
         "GitHub" : "EbenLewis"
     }
-    is_student = True
 
-    return render_template("contact.html", info=info, student = is_student)
+    return render_template("contact.html", info=info)
 
-@app.route("/tools")
-def tools():
-    tools = ["Flask","HTML","CSS","Jinja2"]
-    return render_template("tools.html", tools=tools)
 
 @app.route("/about")
 def about():
     author = "Eben Lewis"
     interests = ["Guitar","Music Production","Electrical Engineering","Computer Technology"]
-    return render_template("about.html", author=author, interests=interests)
+    tools = ["Flask","HTML","CSS","Jinja2"]
+    return render_template("about.html", author=author, interests=interests, tools=tools)
 
 app.run(debug=True)

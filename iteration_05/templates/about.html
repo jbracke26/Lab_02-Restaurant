@@ -1,10 +1,26 @@
 {% extends 'base.html' %}
 {% block title %} About Us {%endblock%}
 {% block content %} 
-    <h1>We are a great and incredible website</h1> 
+    <div class = "flex flex-col justify-center items-center gap-4 text-blue-500 font-bold">
+    <h1>We are a website</h1> 
     <p>Author: {{ author }}</p>
-    <h2>Interests</h2>
-    <ul>
-    <li>{{interests}}</li>
-    </ul>
+        <div class = "flex justify-relative flex-row gap-4">
+            <div class = "p-4 bg-gray-600 shadow rounded">
+                <h2>Interests:</h2>
+                    <ul>
+                        {% for interest in interests %}
+                            <li>{{ interest }}</li>
+                        {% endfor %}
+                    </ul>
+            </div>
+        <div class= "p-4 bg-gray-600 shadow rounded">
+            <h2>Tools used:</h2>
+                <ul>
+                    {% for tool in tools %}
+                        <li>{{ tool }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
     {% endblock %}
